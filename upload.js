@@ -8,10 +8,10 @@ const app=express();
             cb(null,"upload")
         },
         filename:function(req,file,cb){
-            cb(null,file.fieldname+ "_"+Date.now() + ".jpg")
+            cb(null,file.fieldname+ "_"+Date.now() + ".jpg");
         }
     })
- }).single("user_file");
+ }).single("user_file"); 
 
 
 app.post('/upload',upload,(req,res)=>{
